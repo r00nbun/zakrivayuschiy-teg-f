@@ -220,8 +220,8 @@
   max-inline-size: 234px;
 }
 
-.main__button-end {
-  margin-block-end: 100px;
+.button-end {
+  margin-block-end: 102px;
 }
 
 dialog::backdrop {
