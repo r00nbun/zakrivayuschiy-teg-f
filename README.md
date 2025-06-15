@@ -1,1 +1,1 @@
-https://r00nbun.github.io/zakrivayuschiy-teg-f/
+https://github.com/r00nbun/zakrivayuschiy-teg-f
