@@ -21,9 +21,9 @@
 }
 
 .card {
-  inline-size: 100%;
-  background-color: white;
-  outline: var(--outline-color) solid 2px;
+  inline-size: 100vi;
+  background-color: #fff;
+  border: var(--outline-color) solid 2px;
 }
 
 .card__padding {
@@ -37,7 +37,7 @@
   padding-block-start: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   padding-block-end: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   margin-block-start: 100px;
-  margin-block-end: 105px;
+  margin-block-end: 100px;
   font-family: var(--accent-font), system-ui;
 }
 
@@ -72,7 +72,9 @@
   position: relative;
   font-size: 14px;
   font-family: var(--accent-font), system-ui;
-  outline: var(--outline-color) solid 2px;
+  border-block-start: var(--outline-color) solid 2px;
+  border-block-end: var(--outline-color) solid 2px;
+  overflow: hidden;
 }
 
 .main__image {
@@ -112,7 +114,7 @@
 
 .image-label {
   position: absolute;
-  color: black;
+  color: #000;
   top: 25px;
   right: clamp(0.8125rem, 0.5484rem + 1.1268vw, 1.5625rem);
   text-shadow: -1px 0 var(--label-stroke-color), 0 1px var(--label-stroke-color), 1px 0 var(--label-stroke-color), 0 -1px var(--label-stroke-color);
@@ -142,6 +144,10 @@
   gap: 6px;
 }
 
+.main__text {
+  line-height: 21px;
+}
+
 .button {
   border: none;
   padding: 0;
@@ -151,7 +157,8 @@
 .card__like-button {
   border: var(--outline-color) solid 2px;
   background-color: transparent;
-  padding: 7px 35px;
+  padding: 7px 0px;
+  min-inline-size: 125px;
 }
 
 .button__text {
@@ -172,7 +179,7 @@
 .main__dialog {
   min-inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   padding: 30px 42px;
-  background-color: white;
+  background-color: #fff;
   outline: 1px solid var(--outline-color);
 }
 
@@ -192,25 +199,23 @@
   justify-content: center;
   align-items: center;
   max-inline-size: fit-content;
-  background-color: white;
+  background-color: #fff;
   border: 2px solid var(--outline-color);
   padding: 15px 20px;
   cursor: pointer;
+  margin-block-end: 102px;
 }
 
 .dialog__closed-button {
+  display: flex;
+  justify-content: center;
+  inline-size: 100%;
   font-family: var(--accent-font), system-ui;
   text-transform: uppercase;
   background-color: transparent;
   padding: 12.5px 44%;
   border: 2px solid var(--outline-color);
   cursor: pointer;
-}
-
-.main__closed-button {
-  display: flex;
-  justify-content: center;
-  inline-size: 100%;
 }
 
 .main__dialog-text-open {
@@ -220,32 +225,33 @@
   max-inline-size: 234px;
 }
 
-.button-end {
-  margin-block-end: 102px;
-}
-
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
 
 @media (width > 375px) {
-  .button-end {
+  .main__dialog-open-button {
     flex-direction: row;
   }
 
   .card {
-    inline-size: 48.3vi;
+    inline-size: clamp(23.4375rem, 100vi, 48.3vi);
   }
 
   .header__logo {
-    font-size: 4.5vi;
+    font-size: clamp(48px, 2.7104rem + 1.5023vi, 4.5vi);
   }
 
   .header__title {
-    font-size: 1.6vi;
+    font-size: clamp(13.8px, 2.7104rem + 1.5023vi, 1.6vi);
   }
 
   .card__padding {
     padding-block-start: 30px;
+  }
+  
+  .button-open {
+    width: 21px;
+    height: 21px;
   }
 }
