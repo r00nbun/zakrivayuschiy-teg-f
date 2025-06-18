@@ -62,10 +62,8 @@
 
 .main__title {
   font-size: var(--main-font-size);
-  padding-inline-start: 10px;
-  padding-inline-end: 10px;
+  padding: 5px 10px;
   font-variation-settings: 'wght' 700;
-  margin: 6px 0;
 }
 
 .main__group-img {
@@ -174,7 +172,7 @@
   display: flex;
   flex-direction: column;
   gap: 26px;
-  padding-block-start: 23px;
+  padding-block-start: 25px;
 }
 
 .main__dialog {
@@ -221,6 +219,7 @@
 
 .main__dialog-text-open {
   font-family: var(--accent-font), system-ui;
+  font-size: 14px;
   text-transform: uppercase;
   line-height: 150%;
   max-inline-size: 234px;
@@ -250,5 +249,9 @@ dialog::backdrop {
   .button-open {
     width: 21px;
     height: 21px;
+  }
+
+  .main__dialog {
+    padding: 30px;
   }
 }
